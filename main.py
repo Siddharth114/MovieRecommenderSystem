@@ -15,46 +15,46 @@ def collapse(L):
     return [i.replace(' ','') for i in L]
 
 def recommend(movie):
-    index = new[new['title'] == movie].index[0]
+    index = training_data[training_data['title'] == movie].index[0]
     distances = sorted(list(enumerate(similarity[index])),reverse=True,key = lambda x: x[1])
     for i in distances[1:6]:
-        print(new.iloc[i[0]].title)
+        print(training_data.iloc[i[0]].title)
 
 credits = pd.read_csv('Movie Datasets/tmdb_5000_credits.csv')
 movies = pd.read_csv('Movie Datasets/tmdb_5000_movies.csv')
 
-movies = movies.merge(credits,on='title')
+data = movies.merge(credits,on='title')
 
-movies = movies[['movie_id','title','overview','genres','keywords','cast','crew']]
+data = data[['movie_id','title','overview','genres','keywords','cast','crew']]
 
-movies.dropna(inplace=True)
+data.dropna(inplace=True)
 
-movies['genres'] = movies['genres'].apply(format)
+data['genres'] = data['genres'].apply(format)
 
-movies['keywords'] = movies['keywords'].apply(format)
+data['keywords'] = data['keywords'].apply(format)
 
-movies['cast'] = movies['cast'].apply(format)
-movies['cast'] = movies['cast'].apply(lambda x:x[0:3])
+data['cast'] = data['cast'].apply(format)
+data['cast'] = data['cast'].apply(lambda x:x[0:3])
 
-movies['director'] = movies['crew'].apply(get_director)
+data['director'] = data['crew'].apply(get_director)
 
-movies['cast'] = movies['cast'].apply(collapse)
-movies['director'] = movies['director'].apply(collapse)
-movies['genres'] = movies['genres'].apply(collapse)
-movies['keywords'] = movies['keywords'].apply(collapse)
+data['cast'] = data['cast'].apply(collapse)
+data['director'] = data['director'].apply(collapse)
+data['genres'] = data['genres'].apply(collapse)
+data['keywords'] = data['keywords'].apply(collapse)
 
-movies['overview'] = movies['overview'].apply(lambda x:x.split())
+data['overview'] = data['overview'].apply(lambda x:x.split())
 
-movies['attributes'] = movies['overview'] + movies['genres'] + movies['keywords'] + movies['cast'] + movies['crew']
+data['attributes'] = data['overview'] + data['genres'] + data['keywords'] + data['cast'] + data['director']
 
-new = movies.drop(columns=['overview','genres','keywords','cast','crew'])
+training_data = data.drop(columns=['overview','genres','keywords','cast','director'])
 
-new['tags'] = new['tags'].apply(lambda x: " ".join(x))
+training_data['attributes'] = training_data['attributes'].apply(lambda x: " ".join(x))
 
 
 cv = CountVectorizer(max_features=5000,stop_words='english')
-vector = cv.fit_transform(new['tags']).toarray()
+vector = cv.fit_transform(training_data['attributes']).toarray()
 
 similarity = cosine_similarity(vector)
 
-recommend
+recommend('Batman')
