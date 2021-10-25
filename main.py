@@ -52,12 +52,17 @@ training_data = data.drop(columns=['overview','genres','keywords','cast','direct
 
 training_data['attributes'] = training_data['attributes'].apply(lambda x: " ".join(x))
 
+#print(training_data.columns)
 
 cv = CountVectorizer(max_features=5000,stop_words='english')
 vector = cv.fit_transform(training_data['attributes']).toarray()
 
 similarity = cosine_similarity(vector)
 
-recommend('Batman')
+#recommend('Batman')
+
+titles = list(training_data['title'])
+#print(titles)
+
 
 pickle.dump(training_data,open('movie_list.pkl','wb'))
