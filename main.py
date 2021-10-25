@@ -3,6 +3,7 @@ import pandas as pd
 import ast
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+import pickle
 
 
 def format(text):
@@ -58,3 +59,5 @@ vector = cv.fit_transform(training_data['attributes']).toarray()
 similarity = cosine_similarity(vector)
 
 recommend('Batman')
+
+pickle.dump(training_data,open('movie_list.pkl','wb'))
