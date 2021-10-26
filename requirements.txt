@@ -1,7 +1,0 @@
-streamlit
-lxml
-numpy
-pandas
-ast
-requests
-PIL
