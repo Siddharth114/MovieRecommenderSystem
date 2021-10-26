@@ -1,0 +1,9 @@
+streamlit
+lxml
+sklearn.feature_extraction.text
+sklearn.metrics.pairwise
+numpy
+pandas
+ast
+requests
+PIL
