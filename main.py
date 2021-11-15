@@ -25,6 +25,9 @@ def recommend(movie):
 
 credits = pd.read_csv('Movie Datasets/tmdb_5000_credits.csv')
 movies = pd.read_csv('Movie Datasets/tmdb_5000_movies.csv')
+extra = pd.read_csv('Movie Datasets/extra_movies.csv', dtype={'movie_id':np.int64})
+
+
 
 data = movies.merge(credits,on='title')
 
@@ -56,14 +59,20 @@ training_data = data.drop(columns=['overview','genres','keywords','cast','direct
 
 training_data['attributes'] = training_data['attributes'].apply(lambda x: " ".join(x))
 
-#print(training_data.columns)
+training_data = training_data.drop(columns=['crew'])
+
+training_data = training_data.append(extra)
+
+#print(training_data.head())
+
 
 cv = CountVectorizer(max_features=5000,stop_words='english')
-vector = cv.fit_transform(training_data['attributes']).toarray()
+#vector = cv.fit_transform(training_data['attributes']).toarray()
+vector = cv.fit_transform(training_data['attributes'].values.astype('U')).toarray()
 
 similarity = cosine_similarity(vector)
 
-#recommend('Batman')
+print(recommend('Batman'))
 
 titles = list(training_data['title'])
 #print(titles)
