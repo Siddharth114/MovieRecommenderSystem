@@ -18,7 +18,7 @@ def recommend(movie):
     index = training_data[training_data['title'] == movie].index[0]
     distances = sorted(list(enumerate(similarity[index])),reverse=True,key = lambda x: x[1])
     res = []
-    for i in distances[1:6]:
+    for i in distances[1:7]:
         #print(training_data.iloc[i[0]].title)
         res.append(training_data.iloc[i[0]].title)
     return res
@@ -72,7 +72,7 @@ vector = cv.fit_transform(training_data['attributes'].values.astype('U')).toarra
 
 similarity = cosine_similarity(vector)
 
-print(recommend('Batman'))
+# print(recommend('Batman'))
 
 titles = list(training_data['title'])
 #print(titles)

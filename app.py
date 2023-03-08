@@ -13,6 +13,7 @@ if nav == 'Home':
     option = st.selectbox(
         'Choose your movie',
         (i for i in main.titles))
+    # print(option)
     st.subheader('You selected:')
     option_img_response = requests.get(f'http://www.omdbapi.com/?t={option}&apikey=f5f824aa')
     option_img = option_img_response.json()
@@ -44,6 +45,8 @@ if nav == 'Home':
         st.image(images[3][1]['Poster'], width=200, caption = f'{images[3][0]}: {summaries[3]}')
     with col5:
         st.image(images[4][1]['Poster'], width=200, caption = f'{images[4][0]}: {summaries[4]}')
+    with col6:
+        st.image(images[5][1]['Poster'], width=200, caption = f'{images[5][0]}: {summaries[5]}')
 
 if nav == 'Contribute':
     st.header('Contribute')
