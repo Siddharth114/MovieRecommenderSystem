@@ -19,4 +19,4 @@ Introducing FlickFinder, your movie matchmaker with a twist! Tired of endlessly 
 
 ### The user can also add movies that the database doesn't already have.
 
-![Screenshot 2023-02-23 at 9 35 29 PM](https://user-images.githubusercontent.com/90757474/220963655-d4ee963f-1297-4bc4-8f77-e03dee3a8c8e.jpg)
+![image](https://github.com/Siddharth114/MovieRecommenderSystem/assets/90757474/bc2c0007-cc96-4a72-8af1-02994cb239c0)
