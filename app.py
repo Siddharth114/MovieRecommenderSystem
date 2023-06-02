@@ -66,15 +66,15 @@ if nav == 'Home':
         with col6:
             st.image(images[5][1]['Poster'], width=200, caption = f'{images[5][0]}: {summaries[5]}')
 
-    if nav == 'Contribute':
-        st.header('Contribute')
-        st.subheader('Are you aware of a movie that you want as a part of this database?')
-        st.write('Submit the title of the movie here')
-        with st.form("my_form"):
-            title = st.text_input('Movie title', '')
-            submitted = st.form_submit_button("Submit")
-            if submitted:
-                st.write('Movie to be updated:', title)
-                st.wrte('Your contribution is much appreciated!')
+if nav == 'Contribute':
+    st.header('Contribute')
+    st.subheader('Are you aware of a movie that you want as a part of this database?')
+    st.write('Submit the title of the movie here')
+    with st.form("my_form"):
+        title = st.text_input('Movie title', '')
+        submitted = st.form_submit_button("Submit")
+        if submitted:
+            st.write('Movie to be updated:', title)
+            st.wrte('Your contribution is much appreciated!')
 
         
