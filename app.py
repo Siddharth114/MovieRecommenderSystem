@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 import main
 from PIL import Image
 import requests
@@ -7,7 +6,6 @@ import requests
 
 stop=False
 
-error_img = Image.open('/Users/siddharth/Code/Python/MovieRecommenderSystem/error_img.jpg')
 
 st.title('FlickFinder')
 
@@ -37,7 +35,6 @@ if nav == 'Home':
         st.image(option_img['Poster'], width = 200, caption=option)
     except KeyError:
         st.warning('We haven\'t found sufficient information on this movie yet')
-        st.image(error_img)
         stop=True
     
     
