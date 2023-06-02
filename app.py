@@ -37,7 +37,7 @@ if nav == 'Home':
         st.image(option_img['Poster'], width = 200, caption=option)
     except KeyError:
         st.warning('We haven\'t found sufficient information on this movie yet')
-        st.image(error_img, width = 200)
+        st.image(error_img)
         stop=True
     
     
