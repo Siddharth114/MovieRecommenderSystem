@@ -72,7 +72,7 @@ if nav == 'Home':
 if nav == 'Contribute':
     st.header('Contribute')
     st.subheader('Are you aware of a movie that you want as a part of this database?')
-    st.write('Submit the title of the movie here')
+    st.write('Submit the title of the movie here, and we\'ll make sure it\'s there the next time you visit this site!')
     with st.form("my_form"):
         title = st.text_input('Movie title', '')
         submitted = st.form_submit_button("Submit")
