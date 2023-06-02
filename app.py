@@ -7,21 +7,24 @@ import requests
 stop=False
 
 
-st.title('FlickFinder')
-
-st.markdown('''Introducing FlickFinder, your movie matchmaker with a twist! Tired of endlessly scrolling through streaming platforms, 
-desperately seeking that perfect movie night gem? Say no more! 
-FlickFinder is here to save the day, bringing you personalized movie recommendations like no other.''')
-
-
-st.markdown('''We're not your ordinary movie recommender; we've mastered the art of cinematic matchmaking. 
-Just tell us your favorite flick, and we'll unleash our algorithmic Cupids to curate a handpicked 
-selection of movies that capture the same essence, style, or thrills you adore. Get ready to embark on an unforgettable movie adventure 
-tailored just for you. Lights, camera, discover! ''')
 
 nav = st.sidebar.radio(label='Navigation', options=['Home', 'Contribute'])
 
 if nav == 'Home':
+
+    st.title('FlickFinder')
+
+    st.markdown('''Introducing FlickFinder, your movie matchmaker with a twist! Tired of endlessly scrolling through streaming platforms, 
+    desperately seeking that perfect movie night gem? Say no more! 
+    FlickFinder is here to save the day, bringing you personalized movie recommendations like no other.''')
+
+
+    st.markdown('''We're not your ordinary movie recommender; we've mastered the art of cinematic matchmaking. 
+    Just tell us your favorite flick, and we'll unleash our algorithmic Cupids to curate a handpicked 
+    selection of movies that capture the same essence, style, or thrills you adore. Get ready to embark on an unforgettable movie adventure 
+    tailored just for you. Lights, camera, discover! ''')
+
+
     option = st.selectbox(
         'Choose your movie here',
         (i for i in main.titles))
