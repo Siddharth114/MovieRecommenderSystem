@@ -61,7 +61,7 @@ training_data['attributes'] = training_data['attributes'].apply(lambda x: " ".jo
 
 training_data = training_data.drop(columns=['crew'])
 
-training_data = training_data.append(extra)
+training_data = pd.concat([training_data, extra])
 
 #print(training_data.head())
 
