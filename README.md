@@ -4,7 +4,7 @@
 
 ---
 
-### Movie Recommender System which uses cosine similarity to give suggestions to a movie that the user selects.
+Introducing FlickFinder, your movie matchmaker with a twist! Tired of endlessly scrolling through streaming platforms, desperately seeking that perfect movie night gem? Say no more! FlickFinder is here to save the day, bringing you personalized movie recommendations like no other. We're not your ordinary movie recommender; we've mastered the art of cinematic matchmaking. Just tell us your favorite flick, and we'll unleash our algorithmic Cupids to curate a handpicked selection of movies that capture the same essence, style, or thrills you adore. Get ready to embark on an unforgettable movie adventure tailored just for you. Lights, camera, discover!
 
 
 ![Screenshot 2023-02-23 at 9 34 39 PM](https://user-images.githubusercontent.com/90757474/220963514-b2b69cfe-1a0e-4c1a-a226-dec6317df8a0.jpg)
