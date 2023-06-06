@@ -2,13 +2,15 @@ import streamlit as st
 import main
 from PIL import Image
 import requests
+from streamlit_option_menu import option_menu
 
 
 stop=False
 
 
 
-nav = st.sidebar.radio(label='Navigation', options=['Home', 'Contribute'])
+nav = option_menu(None, ["Home", 'Contribute'], 
+        icons=['house', 'pencil'], default_index=0, menu_icon='list', orientation='horizontal')
 
 if nav == 'Home':
 
