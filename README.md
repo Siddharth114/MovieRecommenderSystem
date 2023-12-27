@@ -6,6 +6,27 @@
 
 Introducing FlickFinder, your movie matchmaker with a twist! Tired of endlessly scrolling through streaming platforms, desperately seeking that perfect movie night gem? Say no more! FlickFinder is here to save the day, bringing you personalized movie recommendations like no other. We're not your ordinary movie recommender; we've mastered the art of cinematic matchmaking. Just tell us your favorite flick, and we'll unleash our algorithmic Cupids to curate a handpicked selection of movies that capture the same essence, style, or thrills you adore. Get ready to embark on an unforgettable movie adventure tailored just for you. Lights, camera, discover!
 
+---
+### Key Features:
+
+* Comprehensive Movie Exploration: Explore a diverse catalog of films, drawing upon the extensive resources of The Movie Database (TMDb).
+* Personalized Recommendations: Receive tailored movie suggestions based on your unique preferences, powered by cosine similarity analysis.
+* Multifaceted Similarity Assessment: Discover movies that resonate with your tastes by considering a rich array of features, including:
+- Movie titles
+- Overviews and plot summaries
+- Genre classifications
+- Key themes and keywords
+- Cast and crew information
+* User-Driven Discovery: Initiate the recommendation process by simply selecting a movie that piques your interest.
+* Engaging Presentation: Access a curated list of six movies that share significant similarities with your chosen film, broadening your cinematic horizons.
+
+---
+### Built with:
+
+* Python (specify libraries used for data manipulation, model building, etc.)
+* Cosine similarity algorithm (scipy)
+* The Movie Database (TMDb) API
+---
 
 ![image](https://github.com/Siddharth114/MovieRecommenderSystem/assets/90757474/0cd9282f-1b91-447e-b808-7905421f6978)
 ![Screenshot 2023-02-23 at 9 34 56 PM](https://user-images.githubusercontent.com/90757474/220963524-eaecbd41-371e-47aa-a0cd-c3c743b7ae12.jpg)
