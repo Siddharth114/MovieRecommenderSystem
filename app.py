@@ -84,8 +84,12 @@ if nav == "Home":
 
         with col1:
             if images[0][1]["Response"] != False:
+                if images[0][1]['Poster']=='N/A':
+                    im = 'not_found.jpg'
+                else:
+                    im=images[0][1]['Poster']
                 st.image(
-                    images[0][1]["Poster"],
+                    im,
                     width=200,
                     caption=f"{images[0][0]}: {summaries[0]}",
                 )
@@ -93,8 +97,12 @@ if nav == "Home":
                 st.image(image="not_found.jpg", width=200)
         with col2:
             if images[1][1]["Response"] != False:
+                if images[1][1]['Poster']=='N/A':
+                    im = 'not_found.jpg'
+                else:
+                    im=images[1][1]['Poster']
                 st.image(
-                    images[1][1]["Poster"],
+                    im,
                     width=200,
                     caption=f"{images[1][0]}: {summaries[1]}",
                 )
@@ -102,8 +110,12 @@ if nav == "Home":
                 st.image(image="not_found.jpg", width=200)
         with col3:
             if images[2][1]["Response"] != False:
+                if images[2][1]['Poster']=='N/A':
+                    im = 'not_found.jpg'
+                else:
+                    im=images[2][1]['Poster']
                 st.image(
-                    images[2][1]["Poster"],
+                    im,
                     width=200,
                     caption=f"{images[2][0]}: {summaries[2]}",
                 )
@@ -113,8 +125,12 @@ if nav == "Home":
         col4, col5, col6 = st.columns(3)
         with col4:
             if images[3][1]["Response"] != False:
+                if images[3][1]['Poster']=='N/A':
+                    im = 'not_found.jpg'
+                else:
+                    im=images[3][1]['Poster']
                 st.image(
-                    images[3][1]["Poster"],
+                    im,
                     width=200,
                     caption=f"{images[3][0]}: {summaries[3]}",
                 )
@@ -122,8 +138,12 @@ if nav == "Home":
                 st.image(image="not_found.jpg", width=200)
         with col5:
             if images[4][1]["Response"] != False:
+                if images[4][1]['Poster']=='N/A':
+                    im = 'not_found.jpg'
+                else:
+                    im=images[4][1]['Poster']
                 st.image(
-                    images[4][1]["Poster"],
+                    im,
                     width=200,
                     caption=f"{images[4][0]}: {summaries[4]}",
                 )
@@ -131,8 +151,12 @@ if nav == "Home":
                 st.image(image="not_found.jpg", width=200)
         with col6:
             if images[5][1]["Response"] != "False":
+                if images[5][1]['Poster']=='N/A':
+                    im = 'not_found.jpg'
+                else:
+                    im=images[5][1]['Poster']
                 st.image(
-                    images[5][1]["Poster"],
+                    im,
                     width=200,
                     caption=f"{images[5][0]}: {summaries[5]}",
                 )
